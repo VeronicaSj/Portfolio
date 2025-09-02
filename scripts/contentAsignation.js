@@ -16,7 +16,6 @@ async function loadHTML(id, file) {
 
         container.innerHTML = html;
     } catch (err) {
-        console.error(err);
         const fallback = document.getElementById(id);
         if (fallback) {
             fallback.innerHTML = `
