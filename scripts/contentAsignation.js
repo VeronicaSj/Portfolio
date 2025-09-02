@@ -35,7 +35,7 @@ function cargarPagina(seccion) {
         loadBlog();
         break;
 
-    case 'about':
+    case 'about': 
         loadMainPage();
         window.location.href = "../index.html#about";
         break;
