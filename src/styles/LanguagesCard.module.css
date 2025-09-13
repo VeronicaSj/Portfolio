@@ -1,0 +1,28 @@
+.container {
+    padding: 24px;  
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  
+.th{
+    background-color: var(--clr-funct-bg2);
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    font-weight: 600;
+    color: var(--clr-funct-high-light-1);
+  }
+
+.td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+  }

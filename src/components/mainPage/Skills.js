@@ -3,18 +3,14 @@ import  '../../styles/index.css';
 import  '../../styles/sectionFirst.css';
 import LanguagesCard from './LanguagesCard';
 import SkillsDropdown from './SkillsDropdown';
+import SkillsStyles from '../../styles/Skills.module.css';
 
 function Skills() {
     return (
       <section id="skills" className='sectionFirst'>
           <div>
             <h2>My Skills</h2>
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: '2rem',
-                paddingLeft: '5rem',
-                paddingRight: '5rem',}}>
+            <div className={SkillsStyles.skills} >
               {/* Java Ecosystem */}
               <SkillsDropdown skillGroup="Java Ecosystem" 
                   skillList={["Java", "J2EE", "Jakarta EE",

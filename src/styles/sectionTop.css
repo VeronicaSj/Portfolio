@@ -1,6 +1,6 @@
 .sectionTop {
-    color: var(--clr-bg);
-    background-color: var(--clr-orange);
+    color: var(--clr-funct-font);
+    background-color: var(--clr-funct-bg);
 }
 
 .header{

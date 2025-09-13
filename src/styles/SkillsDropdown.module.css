@@ -1,0 +1,32 @@
+.container {
+    border: var(--clr-white);
+    border-Radius: 20px;
+    box-Shadow: 2px 2px 10px #000000;
+    display: flex;
+    flex-Direction: column;
+    justify-Content: space-between;
+    background-Color: var(--clr-funct-bg2);
+    color: var(--clr-funct-high-light-1);
+    padding: 1rem;
+    text-Align: center;
+}
+
+.list {
+    list-style-type: none;
+    
+    box-Shadow: 2px 2px 10px #000000;
+    padding: 8px 20px;
+    margin: 0;
+    background-color: var(--clr-funct-bg);
+    color : var(--clr-funct-font);
+    position: absolute;
+  };
+
+.cardSubtitle {
+    font-Weight: bolder;
+}
+
+.description{
+    text-Align: left;
+}
+

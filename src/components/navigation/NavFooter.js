@@ -5,8 +5,8 @@ function NavFooter() {
     const footerStyle = {
         width: "100%",
         padding: "20px 0",
-        backgroundColor: "var(--clr-orange)",
-        color: "var(--clr-bg)",
+        backgroundColor: "var(--clr-funct-high-light-1)",
+        color: "var(--clr-funct-font)",
         textAlign: "center",
         fontSize: "16px",
     };

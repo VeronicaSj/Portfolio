@@ -1,50 +1,20 @@
 import React from "react";
 import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa";
 
+import  ContactStyle from '../../styles/Contact.module.css';
+
 function Contact() {
-  const containerStyle = {
-    display: "grid",
-    gridTemplateColumns: "repeat(2, minmax(160px, 1fr))",
-    gap: "20px",
-    padding: "20px",
-    maxWidth: "800px",
-    margin: "40px auto",
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-  };
-
-  const cardStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "8px",
-    padding: "16px",
-    borderRadius: "12px",
-    backgroundColor: "var(--clr-white)",
-    textDecoration: "none",
-    color: "var(--clr-brown)",
-    transition: "all 0.2s ease",
-    cursor: "pointer",
-    textAlign: "center",
-  };
-
-  const iconStyle = {
-    fontSize: "28px",
-    color: "var(--clr-orange)",
-    transition: "color 0.2s, transform 0.2s",
-  };
-
   const hoverEffect = (e) => {
-    e.currentTarget.style.backgroundColor = "var(--clr-orange)";
-    e.currentTarget.style.color = "var(--clr-white)";
-    e.currentTarget.querySelector("svg").style.color = "var(--clr-white)";
+    e.currentTarget.style.backgroundColor = "var(--clr-funct-high-light-1)";
+    e.currentTarget.style.color = "var(--clr-funct-bg2)";
+    e.currentTarget.querySelector("svg").style.color = "var(--clr-funct-bg2)";
     e.currentTarget.style.transform = "translateY(-5px)";
   };
 
   const leaveEffect = (e) => {
-    e.currentTarget.style.backgroundColor = "var(--clr-white)";
-    e.currentTarget.style.color = "var(--clr-brown)";
-    e.currentTarget.querySelector("svg").style.color = "var(--clr-orange)";
+    e.currentTarget.style.backgroundColor = "var(--clr-funct-bg2)";
+    e.currentTarget.style.color = "var(--clr-funct-high-light-1)";
+    e.currentTarget.querySelector("svg").style.color = "var(--clr-funct-high-light-1)";
     e.currentTarget.style.transform = "translateY(0)";
   };
 
@@ -85,7 +55,7 @@ function Contact() {
     <section id="contact">
       <h2>Contact</h2>
       <p>You can contact me through the following means:</p>
-      <div style={containerStyle}>
+      <div className={ContactStyle.container}>
 
       {contacts.map((contact, index) => (
         <a
@@ -93,11 +63,11 @@ function Contact() {
           href={contact.href}
           target={contact.target}
           rel="noreferrer"
-          style={cardStyle}
+          className={ContactStyle.card}
           onMouseEnter={hoverEffect}
           onMouseLeave={leaveEffect}
         >
-          <div style={iconStyle}>{contact.icon}</div>
+          <div className={ContactStyle.icon}>{contact.icon}</div>
           <span>{contact.label}</span>
         </a>
       ))}

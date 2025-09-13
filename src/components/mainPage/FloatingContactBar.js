@@ -1,61 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+
 import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa";
 
+import  ContactStyle from '../../styles/FloatingContactBar.module.css';
+import FloatingContactItem from "./FoatingContactItem";
+
 export default function FloatingContactBar() {
-  const barStyle = {
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    display: "flex",
-    gap: "12px",
-    backgroundColor: "var(--clr-white)",
-    padding: "10px 14px",
-    borderRadius: "50px",
-    boxShadow: "0 6px 15px var(--clr-black)",
-    zIndex: 999,
-  };
-
-  const iconContainer = {
-    position: "relative",
-    width: "44px",
-    height: "44px",
-    borderRadius: "50%",
-    backgroundColor: "var(--clr-green)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "var(--clr-white)",
-    fontSize: "18px",
-    cursor: "pointer",
-    transition: "transform 0.2s, background-color 0.2s",
-  };
-
-  const tooltipStyle = {
-    position: "absolute",
-    bottom: "50px",
-    left: "50%",
-    transform: "translateX(-50%)",
-    backgroundColor: "var(--clr-brown)",
-    color: "var(--clr-white)",
-    padding: "6px 10px",
-    borderRadius: "6px",
-    fontSize: "12px",
-    whiteSpace: "nowrap",
-    opacity: 0,
-    pointerEvents: "none",
-    transition: "opacity 0.2s",
-  };
-
-  const showTooltip = (e) => {
-    e.currentTarget.querySelector(".tooltip").style.opacity = 1;
-    e.currentTarget.style.transform = "scale(1.2)";
-  };
-
-  const hideTooltip = (e) => {
-    e.currentTarget.querySelector(".tooltip").style.opacity = 0;
-    e.currentTarget.style.transform = "scale(1)";
-  };
-
+  
   const contacts = [
     {
       icon: <FaWhatsapp />,
@@ -90,22 +41,9 @@ export default function FloatingContactBar() {
   ];
 
   return (
-    <div style={barStyle}>
+    <div className={ContactStyle.bar}>
       {contacts.map((contact, index) => (
-        <a
-          key={index}
-          href={contact.href}
-          target={contact.target}
-          rel="noreferrer"
-          style={iconContainer}
-          onMouseEnter={showTooltip}
-          onMouseLeave={hideTooltip}
-        >
-          {contact.icon}
-          <span className="tooltip" style={tooltipStyle}>
-            {contact.tooltip}
-          </span>
-        </a>
+        <FloatingContactItem index={index} contact={contact} />
       ))}
     </div>
   );

@@ -1,10 +1,9 @@
 import  '../../styles/index.css';
-import  '../../styles/sectionSecond.css';
 
 function Education() {
     return (
         <section id="education" className='sectionSecond'>
-            <h2 className='header'>Education</h2>
+            <h2 >Education</h2>
             <p>
                 Higher Vocational Training - Multiplatform Application Development
             </p>

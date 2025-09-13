@@ -1,20 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-import About from './About';
-import Contact from './Contact';
-import Education from './Education';
-import Experience from './Experience';
 import Skills from './Skills';
-import Info from './Info';
+import Education from './Education';
+import Contact from './Contact';
 import FloatingContactBar from './FloatingContactBar';
+import Experience from './Experience';
+import About from './About';
+import FiveCircleVenn from './FiveCircleVenn';
+import MainPageStyles from '../../styles/MainPage.module.css';
 
 function MainPage() {
   return (
-    <div id="mainpage" >
-        <Info id="info"></Info>
-        <About id="about"></About>
+    <div id="mainpage"   style={{width:"100%" , display:"flex", flexDirection:"column", alignItems:"center"} }>
+        <div className={MainPageStyles.navHeaderPlaceholder}></div>
+        <div className={MainPageStyles.aboutDiv}>
+          <div className={MainPageStyles.aboutSubDiv}>
+            <About id="about"></About>
+          </div>
+          <div className={MainPageStyles.aboutSubDiv}>
+            <FiveCircleVenn ></FiveCircleVenn>
+          </div>
+        </div>
+
         <Experience id="experience"></Experience>
+
         <Skills id="skills"></Skills>
         <Education id="education"></Education>
         <Contact id="contact"></Contact>

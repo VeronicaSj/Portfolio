@@ -4,23 +4,18 @@ import imgLogoGesvision from '../../images/logoGesvision.jpg';
 import imgLogoKyndryl from '../../images/logoKyndryl.jpg';
 
 import  '../../styles/index.css';
-import  '../../styles/sectionSecond.css';
+import  ExperienceStyle from '../../styles/Experience.module.css';
+
 import ExperienceCard from './ExperienceCard';
 
 function Experience() {
     return (
       <section id="experience" className='sectionSecond'>
         <div>
-          <h2 className='header'>
+          <h2>
             My Experience
           </h2>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '2rem',
-            paddingLeft: '5rem',
-            paddingRight: '5rem',
-          }}>
+          <div className={ExperienceStyle.experienceGrid}>
             <ExperienceCard 
                 img={imgLogoAreaF5} 
                 imageAlt={"Area F5 Logo"} 

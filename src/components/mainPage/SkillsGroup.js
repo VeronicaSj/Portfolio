@@ -1,5 +1,3 @@
-import imgSelfie from '../../images/selfie.png';
-import infoStyles from '../../styles/info.module.css';
 import  '../../styles/index.css';
 import  '../../styles/sectionTop.css';
 

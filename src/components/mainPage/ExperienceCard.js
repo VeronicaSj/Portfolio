@@ -1,16 +1,9 @@
+import  '../../styles/index.css';
+import  ExperienceCardStyle from '../../styles/ExperienceCard.module.css';
+
 function ExperienceCard({ img,imageAlt, title, role, date, description}) {
   return (
-    <div style={{
-        border: "1px solid #ccc",
-        borderRadius: "10px",
-        boxShadow: "2px 2px 10px rgba(0,0,0,0.1)",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        backgroundColor: '#f0f0f0',
-        padding: '1rem',
-        textAlign: 'center',
-    }}>
+    <div className={ExperienceCardStyle.card}>
       <div>
               <img src={img} alt={imageAlt}
                 style={{borderradius: '0.25rem', marginbottom: '1rem', maxwidth: '100%',
@@ -18,9 +11,9 @@ function ExperienceCard({ img,imageAlt, title, role, date, description}) {
                     verticalalign: 'middle',}}
               ></img>
               <h3>{title}</h3>
-              <p style={{fontWeight: 'bolder',}}>{role}</p>
-              <p style={{fontWeight: 'bolder',}}>{date}</p>
-              <div style={{textAlign: 'left'}}>{description}</div>
+              <p className={ExperienceCardStyle.cardSubtitle}>{role}</p>
+              <p className={ExperienceCardStyle.cardSubtitle}>{date}</p>
+              <div className={ExperienceCardStyle.description} >{description}</div>
             </div>
     </div>
   );
