@@ -1,12 +1,12 @@
 import React from "react";
 import imgSelfie from '../../images/selfie.png';
-import infoStyles from '../../styles/navHeader.module.css';
-import Navbar from "./Navbar";
+import infoStyles from './navHeader.module.css';
 import BurgerMenu from "./BurgerMenu";
 
 function NavHeader() {
 
   return (
+    <div>
     <header className={infoStyles.header}>
         <div className={infoStyles.imgContainer}>
               <img src={imgSelfie} alt="Selfie"
@@ -19,6 +19,9 @@ function NavHeader() {
         {/* <Navbar></Navbar> */}
         <BurgerMenu></BurgerMenu>
     </header>
+    
+    <div className={infoStyles.navHeaderPlaceholder}></div>
+    </div>
   );
 }
 

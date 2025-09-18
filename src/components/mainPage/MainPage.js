@@ -1,16 +1,14 @@
-import Skills from './Skills';
-import Education from './Education';
-import Contact from './Contact';
-import FloatingContactBar from './FloatingContactBar';
-import Experience from './Experience';
-import About from './About';
-import FiveCircleVenn from './FiveCircleVenn';
-import MainPageStyles from '../../styles/MainPage.module.css';
+import Skills from './sections/skills/Skills';
+import Education from './sections/education/Education';
+import Contact from './sections/contact/Contact';
+import Experience from './sections/experience/Experience';
+import About from './sections/about/About';
+import FiveCircleVenn from './sections/about/FiveCircleVenn';
+import MainPageStyles from './MainPage.module.css';
 
 function MainPage() {
   return (
     <div id="mainpage"   style={{width:"100%" , display:"flex", flexDirection:"column", alignItems:"center"} }>
-        <div className={MainPageStyles.navHeaderPlaceholder}></div>
         <div className={MainPageStyles.aboutDiv}>
           <div className={MainPageStyles.aboutSubDiv}>
             <About id="about"></About>
@@ -25,7 +23,6 @@ function MainPage() {
         <Skills id="skills"></Skills>
         <Education id="education"></Education>
         <Contact id="contact"></Contact>
-        <FloatingContactBar></FloatingContactBar>
     </div>
   );
 }

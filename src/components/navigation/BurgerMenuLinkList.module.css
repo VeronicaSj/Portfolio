@@ -1,0 +1,24 @@
+a {
+    color: var(--clr-funct-font);
+    text-align: center;
+    
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 3%;
+    min-width: fit-content;
+    transition: ease 0.7s all;
+    cursor: pointer;
+}
+
+.NavLink {
+    color: var(--clr-funct-font);
+    text-align: left;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 3%;
+    min-width: fit-content;
+    transition: ease 0.7s all;
+    cursor: pointer;
+}

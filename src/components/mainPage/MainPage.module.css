@@ -1,0 +1,21 @@
+
+.aboutDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutSubDiv {
+    width: 50%;
+    justify-content: center;
+    align-items:center ;
+    align-content: center;
+}
+
+@media (max-width: 850px) {
+    .aboutDiv {
+        flex-direction: column-reverse;
+    }
+    .aboutSubDiv {
+        width: 100%;
+    }
+}

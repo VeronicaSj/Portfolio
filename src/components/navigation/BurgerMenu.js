@@ -1,9 +1,8 @@
-import React, {useState} from 'react'
-import styles from '../../styles/BurgerMenu.module.css'
+import React, {useRef, useState} from 'react'
+import styles from './BurgerMenu.module.css'
+import BurgerMenuLinkList from './BurgerMenuLinkList';
 
 function BurgerMenu (){
-    
-    const linkList = ["About", "Experience", "Skills", "Education", "Contact"];
 
     // to change burger classes
     const [burger_class, setBurgerClass] = useState(`${styles.burgerBar} ${styles.unclicked}`)
@@ -23,57 +22,16 @@ function BurgerMenu (){
         }
     }
 
-    const hoverEffect = (e) => {
-        e.currentTarget.style.color = "var(--clr-funct-bg2)"
-        e.currentTarget.style.transform = "translateY(-2px)";
-    };
-
-    const leaveEffect = (e) => {
-        e.currentTarget.style.color = "var(--clr-funct-font)";
-        e.currentTarget.style.transform = "translateY(0)";
-    };
-
-    const buildHref = (item) => {
-        return '#' + item.toLowerCase().replace(/\s/g,);
-    }
-
     return(
         <div className={styles.spacer}>
                 <div  className={styles.fullmenu}>
-                    <ul className={styles.navLinksList}>
-                        {linkList.map((item, idx) => (
-                                <a 
-                                key={idx}
-                                href = {buildHref(item)}
-                                onMouseEnter={hoverEffect}
-                                onMouseLeave={leaveEffect}
-                                >
-                                {item}
-                                </a>
-                        ))}
-                    </ul>
-
                     <div className={styles.burgerMenu} onClick={updateMenu}>
                         <div className={burger_class}></div>
                         <div className={burger_class}></div>
                         <div className={burger_class}></div>
                     </div>
+                    <BurgerMenuLinkList className={menu_class}></BurgerMenuLinkList>
                 </div>
-
-            <div className={menu_class} >
-                <ul className={styles.navLinksList}>
-                    {linkList.map((item, idx) => (
-                                <a 
-                                key={idx}
-                                href = {buildHref(item)}
-                                onMouseEnter={hoverEffect}
-                                onMouseLeave={leaveEffect}
-                                >
-                                {item}
-                                </a>
-                        ))}
-                </ul>
-            </div>
         </div>
     )
 }
