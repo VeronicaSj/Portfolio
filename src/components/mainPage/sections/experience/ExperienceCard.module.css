@@ -1,0 +1,20 @@
+.card {
+    border: var(--clr-white);
+    border-Radius: 20px;
+    box-Shadow: 2px 2px 10px #000000;
+    display: flex;
+    flex-Direction: column;
+    justify-Content: space-between;
+    background-Color: var(--clr-funct-bg2);
+    padding: 1rem;
+    text-Align: center;
+}
+
+.cardSubtitle {
+    color: var(--clr-funct-high-light-4);
+    font-Weight: bolder;
+}
+
+.description{
+    text-Align: left;
+}

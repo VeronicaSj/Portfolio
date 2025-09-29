@@ -1,0 +1,31 @@
+.parag {
+    padding: 01rem 10rem;
+    text-align: left;
+}
+
+.highlight{
+    background-color: var(--clr-funct-high-light-3);
+    color: var(--clr-funct-bg)
+}
+
+.list{
+    text-align: left;
+}
+
+@media (max-width: 1000px) {
+    .parag {
+        padding: 01rem 7rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .parag {
+        padding: 01rem 5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .parag {
+        padding: 01rem 3rem;
+    }
+}

@@ -1,0 +1,52 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+
+    border: var(--clr-white);
+    border-Radius: 20px;
+    box-Shadow: 2px 2px 10px #000000;
+
+    justify-Content: space-between;
+    background-Color: var(--clr-funct-bg2);
+    color: var(--clr-funct-high-light-1);
+
+    width: 80%;
+}
+
+.highlight{
+    background-color: var(--clr-funct-high-light-3);
+    color: var(--clr-funct-bg)
+}
+
+.list{
+    text-align: left;
+}
+
+.listItem{
+    padding: 1rem 0;
+}
+
+@media (max-width: 1050px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    .parag {
+        padding: 01rem 7rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .parag {
+        padding: 01rem 5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .parag {
+        padding: 01rem 3rem;
+    }
+}

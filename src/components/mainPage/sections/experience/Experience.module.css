@@ -1,0 +1,14 @@
+.experienceGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+@media (max-width: 1200px) {
+    .experienceGrid{
+        display: flex;
+        flex-direction: column;
+    }
+}

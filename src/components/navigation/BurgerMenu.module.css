@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.spacer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: start;    
+    padding: 2rem;
+}
+
+.fullmenu {
+    width: 100%;
+    display: flex;
+}
+
+.burgerMenu {
+    width: 100%;
+    height: 3em;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.burgerBar {
+    width: 3em;
+    height: 0.5em;
+    background-color: var(--clr-funct-font);
+    border-radius: 0.5em;
+}
+
+.menu {
+    display: none;
+}
+
+.navLinksList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+
+}
+
+.hidden {
+    display: flex;
+    width: 100%;
+}
+
+.visible {
+    display: flex;
+    width: 100%;
+}
+
+
+.burgerBar.clicked:nth-child(1){
+    transform: rotate(45deg) translate(0.15em, 1.25em);
+    transition: ease-out 0.5s;
+}
+
+.burgerBar.clicked:nth-child(2){
+    transform: scale(0.01);
+    transition: ease-out 0.5s;
+}
+
+.burgerBar.clicked:nth-child(3){
+    transform: rotate(135deg) translate(-0.65em, 1.7em);
+    transition: ease-out 0.5s;
+}
+
+.burgerBar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+@media (max-width: 750px) {
+    .fullmenu {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .navLinksList {
+        flex-direction: column;
+    } 
+    .burgerMenu {
+        display: flex;
+    }
+
+    .fullmenu .navLinksList {
+        display: none;
+    } 
+
+    .hidden {
+        display: none;
+    }
+
+    .visible {
+        display: flex;
+        width: 100%;
+        background-color: var(--clr-funct-high-light-2);
+        
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .spacer {   
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .fullmenu {
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+}
